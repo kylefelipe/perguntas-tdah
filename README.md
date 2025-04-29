@@ -43,4 +43,4 @@ Pode criar um arquivo de perguntas em formato JSON. O arquivo deve conter uma li
 
 ## Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um problema ou enviar um pull request.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
