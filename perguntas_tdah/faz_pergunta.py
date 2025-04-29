@@ -2,6 +2,7 @@ import json
 import argparse
 import os
 import random
+import tomllib
 from datetime import datetime
 
 QUESTIONS_FILE = "./perguntas_tdah.json"
@@ -51,6 +52,18 @@ def log_data(question_id, question, question_file, log_file="log.txt"):
     with open(log_file, mode=mode, encoding="UTF-8") as file:
         file.write(txt_log)
 
+def get_version_from_pyproject():
+    """
+    Get the version from pyproject.toml file.
+    """
+    try:
+        with open("pyproject.toml", "rb") as f:
+            pyproject = tomllib.load(f)
+        return pyproject["tool"]["poetry"]["version"]
+    except FileNotFoundError:
+        return "0.0.0"
+
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -60,6 +73,13 @@ def main():
         "Esse script irá fazer uma pergunta aleatória e registrar a resposta."
     )
     parser.epilog = "Contato: " "kylefelipe@gmail.com"
+    parser.add_argument(
+        "-v",
+        "--version",
+        action="version",
+        version=f"%(prog)s Versão: {get_version_from_pyproject()}",
+        help="Mostra a versão do programa.",
+    )
     parser.add_argument(
         "-q",
         "--question-file",
