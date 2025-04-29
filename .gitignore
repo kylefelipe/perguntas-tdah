@@ -1,0 +1,22 @@
+# Ignorar o arquivo log.txt
+log.txt
+
+# Ignorar arquivos Python desnecessários
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignorar arquivos específicos do Linux
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Ignorar a pasta .venv
+.venv/
