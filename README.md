@@ -5,7 +5,7 @@ Um simples questionário para ajudar a enfrentar o TDAH.
 ## Instalação
 
 ```bash
-git clone <endereço-do-repositório>
+git clone git@github.com:kylefelipe/perguntas-tdah.git
 cd 72-perguntas-para-tdah
 pip install .
 
