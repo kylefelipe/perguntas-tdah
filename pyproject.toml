@@ -2,9 +2,16 @@
 name = "perguntas-tdah"
 version = "0.0.0"
 description = "72 Perguntas para TDAH"
-authors = ["Kyle Felipe <kylefelipe@gmail.com>"]
+authors = [{name = "Kyle Felipe", email = "kylefelipe@gmail.com"}]
 readme = "README.md"
 packages = [{ include = "perguntas_tdah", from = "." }]
+
+[project.urls]
+repository = "https://github.com/kylefelipe/perguntas-tdah.git"
+homepage = "https://github.com/kylefelipe/perguntas-tdah"
+keywords = ["tdah", "perguntas", "perguntas tdah", "tdah perguntas"]
+issues = "https://github.com/kylefelipe/perguntas-tdah/issues"
+changelog = "https://github.com/kylefelipe/perguntas-tdah/blob/main/CHANGELOG.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
